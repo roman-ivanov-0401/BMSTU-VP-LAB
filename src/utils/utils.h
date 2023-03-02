@@ -1,0 +1,1 @@
+void inputIntInRange(int& number, int min, int max);

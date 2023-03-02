@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/Lab1.dir/src/main.cpp.o -c \"/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/src/main.cpp\"",
+  "file": "/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/src/main.cpp"
+},
+{
+  "directory": "/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/Lab1.dir/src/menuFuncs.cpp.o -c \"/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/src/menuFuncs.cpp\"",
+  "file": "/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/src/menuFuncs.cpp"
+},
+{
+  "directory": "/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/Lab1.dir/src/Menu/CMenu.cpp.o -c \"/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/src/Menu/CMenu.cpp\"",
+  "file": "/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/src/Menu/CMenu.cpp"
+},
+{
+  "directory": "/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/Lab1.dir/src/MenuItem/CMenuItem.cpp.o -c \"/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/src/MenuItem/CMenuItem.cpp\"",
+  "file": "/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/src/MenuItem/CMenuItem.cpp"
+},
+{
+  "directory": "/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/Lab1.dir/src/utils/utils.cpp.o -c \"/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/src/utils/utils.cpp\"",
+  "file": "/home/roman/МГТУ/Высокоуровневое программирования/Лабораторная работа №1/src/utils/utils.cpp"
+}
+]
