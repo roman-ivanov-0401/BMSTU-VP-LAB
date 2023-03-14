@@ -1,3 +1,3 @@
-void firstPointCb();
-void secondPointCb();
-void thirdPointCb();
+void calculateSquareRootCb();
+void greetUserCb();
+void displayPseudographicsCb();

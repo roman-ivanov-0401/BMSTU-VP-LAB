@@ -9,10 +9,11 @@ using namespace std;
 using namespace CM;
 
 int main(){
+
     CMenuItem* cMenuItems = new CMenuItem[START_QUANTITY_OF_POINTS]{
-        CMenuItem("First", firstPointCb),
-        CMenuItem("Second", secondPointCb),
-        CMenuItem("Third", thirdPointCb),
+        CMenuItem("Calculate the square root", calculateSquareRootCb),
+        CMenuItem("Greet user", greetUserCb),
+        CMenuItem("Display pseudographics", displayPseudographicsCb),
     };
     CMenu cMenu("Menu", cMenuItems, START_QUANTITY_OF_POINTS);
     cMenu.start();

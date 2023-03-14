@@ -55,7 +55,6 @@ namespace CM{
             << endl;
     }
 
-    //TODO: Реализовать проверку корректности вводимого значения
     void CMenu::inputOption(){
         cout << "Enter option: ";
         inputIntInRange(selectedPointNumber, 0, quantityOfPoints);
