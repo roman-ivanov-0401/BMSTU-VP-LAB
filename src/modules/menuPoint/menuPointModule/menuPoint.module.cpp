@@ -5,5 +5,5 @@ void MenuPointModule::run(){
 }
 
 void MenuPointModule::pick(){
-    this->model->getCallback()();
+    this->model->getCallback()(this->model->getIsMenuActive());
 }

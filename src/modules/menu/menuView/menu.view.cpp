@@ -3,6 +3,7 @@
 #include "menu.view.h"
 #include "../../menuPoint/menuPointModule/menuPoint.module.h"
 #include "../../../utils/input/input.utils.h"
+#include "../../../storage/storage.h"
 
 
 using namespace std;
@@ -13,9 +14,10 @@ void MenuView::renderTitle(){
 
 void MenuView::initMenuPoints(vector<MenuPointModule*>& modules){
     for(int i = 0; i < this->controller->getMenuPoints()->size(); i++){
-        modules.push_back(new MenuPointModule(
-            this->controller->getMenuPoints()->at(i)
-            ));
+        modules.push_back(
+                new MenuPointModule(
+            this->controller->getMenuPoints()->at(i), this->model->getIsMenuActivePtr())
+            );
     }
 }
 
@@ -33,6 +35,7 @@ void MenuView::renderInputOfOption(){
 }
 
 void MenuView::render(){
+    Storage *store = Storage::getStorage();
     do{
     system("clear");
     this->renderTitle();
@@ -42,10 +45,10 @@ void MenuView::render(){
     this->renderInputOfOption();
     modules[this->controller->getChosenPoint() - 1]->pick();
     } while(
-        this->controller->getChosenPoint() != this->controller->getMenuPoints()->size()
-        &&
-        this->controller->getIsMenuActive()
-        );
+        //this->controller->getChosenPoint() != this->controller->getMenuPoints()->size()
+
+        //&&
+        this->model->getIsMenuActive());
     
 }
 

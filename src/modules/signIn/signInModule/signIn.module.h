@@ -6,6 +6,8 @@
 
 class SignInModule: IModule<SignInModel, SignInView, SignInController>{
     public:
-        SignInModule(): IModule(){};
+        SignInModule(bool *isMenuActive): IModule(){
+            this->model->setIsMenuActive(isMenuActive);
+        };
         void run() override;
 };

@@ -13,13 +13,12 @@ class Storage{
         Storage(){};
         static Storage* storage;
         Account* authorizedAccount;
-        vector<Account> accounts;
+        vector<Account*> accounts;
         vector<Dialog*> dialogs;
         vector<Interest*> interests;
         vector<Topic*> topics;
         bool toCloseApp = false;
-        //TODO TEMP
-        vector<User> users;
+        bool isMenuActive = false;
     public:
         //void operator = (const Storage&) = delete;
         //Storage(const Storage&) = delete;
@@ -29,9 +28,11 @@ class Storage{
 
         void setAuthorizedAccount(Account*);
 
-        vector<Account>* getAccounts();
+        vector<Account*>* getAccounts();
         void closeApp();
-        void registerAccount(User*);
-        vector<User>* getUsers();
+        void registerAccount(Account*);
+
+        bool getIsMenuActive();
+        void setIsMenuActive(bool value);
 };
 

@@ -1,66 +1,64 @@
 #include <iostream>
-#include <string>
 
 #include "menu.config.h"
 #include "../../../storage/storage.h"
 
 #include "../../../entities/administrator/administrator.entity.h"
-#include "../../../entities/moderator/moderator.entity.h"
-#include "../../../entities/user/user.entity.h"
+
 
 using namespace std;
 
-void toExitCb(){
+void toExitCb(bool *isMenuActive){
     Storage* store = Storage::getStorage();
     store->closeApp();
 }
 
-void NotAuthorized::toSignInCb(){
-    SignInModule signInModule;
+void NotAuthorized::toSignInCb(bool *isMenuActive){
+    SignInModule signInModule(isMenuActive);
     signInModule.run();
 }
 
-void NotAuthorized::toSignUpCb(){
+void NotAuthorized::toSignUpCb(bool *isMenuActive){
     cout << "toSignUpCallback" << endl;
     cin.get();
     cin.get();
 }
 
-void UserIsAuthorized::point1Cb(){
+void UserIsAuthorized::point1Cb(bool *isMenuActive){
     cout << "point1Callback" << endl;
 }
 
-void UserIsAuthorized::point2Cb(){
+void UserIsAuthorized::point2Cb(bool *isMenuActive){
     cout << "point2Callback" << endl;
 }
 
-void UserIsAuthorized::point3Cb(){
+void UserIsAuthorized::point3Cb(bool *isMenuActive){
     cout << "point3Callback" << endl;
 }
 
-void ModeratorIsAuthorized::point1Cb(){
+void ModeratorIsAuthorized::point1Cb(bool *isMenuActive){
     cout << "point1Callback" << endl;
 }
 
-void ModeratorIsAuthorized::point2Cb(){
+void ModeratorIsAuthorized::point2Cb(bool *isMenuActive){
     cout << "point2Callback" << endl;
 }
 
-void ModeratorIsAuthorized::point3Cb(){
+void ModeratorIsAuthorized::point3Cb(bool *isMenuActive){
     cout << "point3Callback" << endl;
 }
 
-void AdministratorIsAuthorized::point1Cb(){
+void AdministratorIsAuthorized::point1Cb(bool *isMenuActive){
     ShowUsersModule showUsersModule;
     showUsersModule.run();
 }
 
-void AdministratorIsAuthorized::point2Cb(){
+void AdministratorIsAuthorized::point2Cb(bool *isMenuActive){
     AddUserModule addUserModule;
     addUserModule.run();
 }
 
-void AdministratorIsAuthorized::point3Cb(){
+void AdministratorIsAuthorized::point3Cb(bool *isMenuActive){
     SortUsersModule sortUsersModule;
     sortUsersModule.run();
 }
@@ -112,12 +110,12 @@ MenuProps getMenuProps(){
 
     Storage* store = Storage::getStorage();
     
-    // bool isAdmin = (bool)dynamic_cast<Administrator*>(store->getAuthorizedAccount());
-    // bool isModer = (bool)dynamic_cast<Moderator*>(store->getAuthorizedAccount());
-    // bool isUser = (bool)dynamic_cast<User*>(store->getAuthorizedAccount());
+     bool isAdmin = (bool)dynamic_cast<Administrator*>(store->getAuthorizedAccount());
+     bool isModer = (bool)dynamic_cast<Moderator*>(store->getAuthorizedAccount());
+     bool isUser = (bool)dynamic_cast<User*>(store->getAuthorizedAccount());
 
-    // if(isAdmin) return administratorAuthorizedMenuProps;
-    // if(isModer) return moderatorAuthorizedMenuProps;
-    // if(isUser) return userAuthorizedMenuProps;
-    return administratorAuthorizedMenuProps;
+     if(isAdmin) return administratorAuthorizedMenuProps;
+     if(isModer) return moderatorAuthorizedMenuProps;
+     if(isUser) return userAuthorizedMenuProps;
+     return unauthorizedMenuProps;
 }

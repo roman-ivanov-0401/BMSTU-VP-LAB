@@ -21,6 +21,10 @@ class MenuPointModel: public IModel{
             return this->order;
         }
 
+        bool *getIsMenuActive(){
+            return this->isMenuActive;
+        }
+
         void setTitle(string title){
             this->title = title;
         }
@@ -32,8 +36,18 @@ class MenuPointModel: public IModel{
         void setOrder(int order){
             this->order = order;
         }
+
+        void setIsMenuActive(bool *value){
+            this->isMenuActive = value;
+        }
+
+
+        void changeIsMenuActive(bool value){
+            *this->isMenuActive = value;
+        };
     private:
         string title;
         Callback callback;
         int order;
+        bool* isMenuActive;
 };

@@ -1,5 +1,5 @@
 #pragma once
-typedef void (*Callback)();
+typedef void (*Callback)(bool *isMenuActive);
 struct MenuPointProps{
     string title;
     Callback callback;

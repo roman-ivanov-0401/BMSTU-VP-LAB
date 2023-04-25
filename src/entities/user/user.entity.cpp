@@ -23,7 +23,7 @@ istream& operator>>(istream &is, User& user){
     cin >> user.password;
 
     Storage* storage = Storage::getStorage();
-    storage->getUsers()->push_back(user);
+    storage->getAccounts()->push_back(&user);
     return is;
 }
 

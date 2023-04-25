@@ -8,7 +8,6 @@ using namespace std;
 class SignInModel: public IModel{
     public: 
         string getLogin(){
-            cout << "Model: " << this->login << endl;
             return this->login;
         }
 
@@ -16,15 +15,28 @@ class SignInModel: public IModel{
             return this->password;
         }
 
-        void setLogin(string login){
-            
-            this->login = login;
+        bool getIsMenuActive(){
+            return this->isMenuActive;
         }
 
-        void setPassword(string password){
-            this->password = password;
+        void setLogin(string newLogin){
+            
+            this->login = newLogin;
+        }
+
+        void setPassword(string newPassword){
+            this->password = newPassword;
+        }
+
+        void setIsMenuActive(bool* value){
+            this->isMenuActive = value;
+        }
+
+        void changeIsMenuActive(bool value){
+            *this->isMenuActive = value;
         }
     private:
         string login;
         string password;
+        bool* isMenuActive;
 };

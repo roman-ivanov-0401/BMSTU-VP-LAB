@@ -21,11 +21,11 @@ bool Storage::getToCloseApp(){
     return this->toCloseApp;
 }
 
-void Storage::registerAccount(User* newAccount){
-    this->users.push_back(*newAccount);
+void Storage::registerAccount(Account* newAccount){
+    this->accounts.push_back(newAccount);
 }
 
-vector<Account>* Storage::getAccounts(){
+vector<Account*>* Storage::getAccounts(){
     return &this->accounts;
 }
 
@@ -33,6 +33,10 @@ void Storage::setAuthorizedAccount(Account* authAc){
     this->authorizedAccount = authAc;
 }
 
-vector<User>* Storage::getUsers(){
-    return &this->users;
+void Storage::setIsMenuActive(bool value) {
+    this->isMenuActive = value;
+}
+
+bool Storage::getIsMenuActive() {
+    return this->isMenuActive;
 }

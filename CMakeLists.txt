@@ -105,4 +105,4 @@ add_executable(Lab
   src/modules/temp/sortUsers/sortUsersView/sortUsers.view.cpp
   src/modules/temp/sortUsers/sortUsersModule/sortUsers.module.h
   src/modules/temp/sortUsers/sortUsersModule/sortUsers.module.cpp
-)
+        src/containers/MyVector.h)

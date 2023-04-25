@@ -11,11 +11,12 @@ using namespace std;
 
 class MenuPointModule: IModule<MenuPointModel, MenuPointView, MenuPointController>{
     public:
-        MenuPointModule(MenuPointProps props)
+        MenuPointModule(MenuPointProps props, bool *isMenuActive)
         : IModule<MenuPointModel, MenuPointView, MenuPointController>(){
             this->model->setTitle(props.title);
             this->model->setCallback(props.callback);
             this->model->setOrder(props.order);
+            this->model->setIsMenuActive(isMenuActive);
         }
 
         void run() override;

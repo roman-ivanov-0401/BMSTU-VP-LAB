@@ -8,29 +8,29 @@
 
 
 namespace AdministratorIsAuthorized{
-    void point1Cb();
-    void point2Cb();
-    void point3Cb();
+    void point1Cb(bool *isMenuActive);
+    void point2Cb(bool *isMenuActive);
+    void point3Cb(bool *isMenuActive);
 }
 
 namespace ModeratorIsAuthorized{
-    void point1Cb();
-    void point2Cb();
-    void point3Cb();
+    void point1Cb(bool *isMenuActive);
+    void point2Cb(bool *isMenuActive);
+    void point3Cb(bool *isMenuActive);
 }
 
 namespace UserIsAuthorized{
-    void point1Cb();
-    void point2Cb();
-    void point3Cb();
+    void point1Cb(bool *isMenuActive);
+    void point2Cb(bool *isMenuActive);
+    void point3Cb(bool *isMenuActive);
 }
 namespace NotAuthorized{
-    void toSignUpCb();
-    void toSignInCb();
+    void toSignUpCb(bool *isMenuActive);
+    void toSignInCb(bool *isMenuActive);
 }
     
 MenuProps getMenuProps();
-void toExitCb();
+void toExitCb(bool *isMenuActive);
      
 
     

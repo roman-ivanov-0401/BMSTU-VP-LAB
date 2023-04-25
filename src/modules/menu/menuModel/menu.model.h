@@ -22,6 +22,10 @@ class MenuModel: public IModel{
             return this->title;
         }
 
+        bool* getIsMenuActivePtr(){
+            return &this->isMenuActive;
+        }
+
         bool getIsMenuActive(){
             return this->isMenuActive;
         }
