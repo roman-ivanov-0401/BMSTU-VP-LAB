@@ -8,6 +8,7 @@ class SignInView: public IView<SignInModel, SignInController>{
         SignInView(SignInModel* signInModel, SignInController* signInController)
         : IView(signInModel, signInController){};
 
+        void wrongData();
         void update() override{};
         void render() override;
 };

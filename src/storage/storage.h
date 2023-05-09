@@ -34,5 +34,6 @@ class Storage{
 
         bool getIsMenuActive();
         void setIsMenuActive(bool value);
+        void logout();
 };
 

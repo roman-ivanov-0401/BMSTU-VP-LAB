@@ -112,6 +112,10 @@ namespace MyContainer{
             return this->length;
         }
 
+        int getCapacity(){
+            return this->capacity;
+        }
+
         //Iterator
         class Iterator{
             friend class MyVector<T>;

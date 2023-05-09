@@ -9,8 +9,6 @@ int main(){
     Storage* store = Storage::getStorage();
     UserFiller::fillSrorage();
 
-    int size = store->getAccounts()->size();
-
 
     while(!store->getToCloseApp()){
         MenuModule menu(getMenuProps());

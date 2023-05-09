@@ -40,3 +40,7 @@ void Storage::setIsMenuActive(bool value) {
 bool Storage::getIsMenuActive() {
     return this->isMenuActive;
 }
+
+void Storage::logout() {
+    this->authorizedAccount = nullptr;
+}

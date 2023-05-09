@@ -105,4 +105,4 @@ add_executable(Lab
   src/modules/temp/sortUsers/sortUsersView/sortUsers.view.cpp
   src/modules/temp/sortUsers/sortUsersModule/sortUsers.module.h
   src/modules/temp/sortUsers/sortUsersModule/sortUsers.module.cpp
-        src/containers/MyVector.h)
+        src/containers/MyVector.h src/modules/signUp/signUpModel/signUp.model.h src/modules/signUp/signUpController/signUp.controller.h src/modules/signUp/signUpView/signUp.view.h src/modules/signUp/signUpModule/signUp.module.h src/modules/signUp/signUpView/signUp.view.cpp src/modules/signUp/signUpModule/signUp.module.cpp src/modules/signUp/signUpController/signUp.controller.cpp)

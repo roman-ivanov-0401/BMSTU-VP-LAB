@@ -3,7 +3,7 @@
 
 class Administrator: public Moderator{
     public:
-        Administrator(string name, string surname, string login, string password)
+        Administrator(string login, string password)
         :Moderator(login, password)
         {};
 };

@@ -5,6 +5,12 @@ using namespace std;
 
 #include "./signIn.view.h"
 
+void SignInView::wrongData() {
+    cout << "Wrong email or password" << endl;
+    cin.get();
+    cin.get();
+}
+
 void SignInView::render(){
     cout << "Sing In:" << endl;
 
@@ -20,8 +26,4 @@ void SignInView::render(){
     
     login = this->controller->getLogin();
     password = this->controller->getPassword();
-
-
-    cin.get();
-    cin.get();
 }
